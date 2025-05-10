@@ -17,7 +17,7 @@ $ stow .
 - Color: `Tokyo Night`
 - Font: `CaskaydiaMono Nerd Font`
 - Browser: `Chrome`, `Firefox`, `Safari`
-- Windows: `AeroSpace (OS X)`, `Hyprland (Linux)`
+- Windows: `AeroSpace (OS X)`, `Gnome (Linux)`
 - Terminal: `Alacritty`, `Tmux`, `ZSH`, `fzf`, `zoxide`
 - Editor: `Neovim`, `VSCode`
 - Tools: `Lazygit`, `Lazydocker`,`TablePlus`
