@@ -105,15 +105,6 @@ export OMAKUB_PATH="/home/$USER/.local/share/omakub"
 
 
 ############################
-# Shell Integrations
-############################
-
-eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
-eval "$(mise activate zsh)"
-
-
-############################
 # Aliases
 ############################
 
@@ -129,3 +120,11 @@ alias kill-session="$HOME/.scripts/tmux/kill-session.sh"
 alias projects="sessionizer projects"
 alias learns="sessionizer learns"
 
+
+############################
+# Shell Integrations
+############################
+
+eval "$(mise activate zsh)"
+source <(fzf --zsh)
+eval "$(zoxide init --cmd cd zsh)"
