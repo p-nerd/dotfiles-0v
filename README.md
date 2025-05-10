@@ -33,7 +33,7 @@ $ stow .
   - 1. `Whatsapp`
   - 2. `Discord`
 - 5. Productivity:
-  - 1. `Pomofocus`,
+  - 1. `Pomatez`,
   - 2. `Todoist`
   - 3. `Keep`,
   - 4. `Asana`
