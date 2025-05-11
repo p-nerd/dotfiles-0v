@@ -1,5 +1,5 @@
 [tools]
 node = "lts"
-ruby = "latest"
+# ruby = "latest"
 go = "latest"
 
