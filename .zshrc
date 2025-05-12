@@ -25,11 +25,30 @@ fi
 # Load Zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Load plugins with Zinit
+# Initialize completion BEFORE plugin loading
+autoload -Uz compinit && compinit
+
+# Replay compdefs now that compinit is active
+zinit cdreplay -q
+
+############################
+# Completion Settings
+############################
+
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+
+
+############################
+# Load Plugins with Zinit
+############################
+
 zinit ice depth=1
 zinit light romkatv/powerlevel10k
 
-# Plugin list
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
@@ -39,23 +58,6 @@ zinit light Aloxaf/fzf-tab
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::command-not-found
-
-# Replay for certain plugins
-zinit cdreplay -q
-
-
-############################
-# Completion Settings
-############################
-
-autoload -Uz compinit && compinit
-
-# Completion appearance and behavior
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 
 ############################
