@@ -1,6 +1,6 @@
 [tools]
-node = "lts"
+# node = "lts"
 # ruby = "latest"
-go = "latest"
+# go = "latest"
 # php = "latest"
 
